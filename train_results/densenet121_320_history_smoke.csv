@@ -1,2 +1,0 @@
-epoch,train_loss,val_acc,val_macro_f1,val_qwk,val_recall_0,val_recall_1,val_recall_2,val_recall_3,val_recall_4
-1,1.5722376505533855,0.19,0.1393077106708045,-0.02732240437158473,0.0,0.15,0.4,0.0,0.4

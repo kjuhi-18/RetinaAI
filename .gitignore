@@ -2,7 +2,18 @@
 # Gitignore for Diabetic Retinopathy Deep Learning & Streamlit Project
 # =============================================================================
 
-# Large Dataset Archives & Cached Image Directories
+# -----------------------------------------------------------------------------
+# 1. Unrelated Projects & Duplicate Notebooks
+# -----------------------------------------------------------------------------
+# Unrelated Lung/LIDC & YNet experiments not part of Diabetic Retinopathy
+LIDC_*
+YNet_*
+Copy_of_*
+*_copy.ipynb
+
+# -----------------------------------------------------------------------------
+# 2. Large Dataset Archives & Cached Image Directories
+# -----------------------------------------------------------------------------
 *.zip
 *.tar
 *.tar.gz
@@ -13,8 +24,9 @@ cache_*/
 data/
 datasets/
 
-# Deep Learning Model Weights & Checkpoints (>100MB / binary weights)
-# Note: Use Git LFS or external cloud storage (Drive/HuggingFace) for weights
+# -----------------------------------------------------------------------------
+# 3. Model Weights & Checkpoints (>25MB - 100MB+ binary weights)
+# -----------------------------------------------------------------------------
 *.pt
 *.pth
 *.ckpt
@@ -24,36 +36,64 @@ datasets/
 *.safetensors
 *.weights
 
-# Precomputed NumPy Batch Arrays & Feature Caches
+# -----------------------------------------------------------------------------
+# 4. Precomputed Batch Features & Serialized Pipelines
+# -----------------------------------------------------------------------------
 *.npy
 *.npz
+*.joblib
+*.pkl
+*.pickle
+vqc_results_512/*_batches/
 vqc_results_512/train_batches/
 vqc_results_512/valid_batches/
+vqc_results_512/test_batches/
 
-# Python Bytecode & Cache
+# -----------------------------------------------------------------------------
+# 5. Old/Superseded Experiments & Smoke Tests
+# -----------------------------------------------------------------------------
+# Old 320x320 experiments (superseded by train_results_v2 512x512)
+train_results/
+*_smoke.*
+*smoke*
+
+# Redundant duplicate evaluation outputs
+train_results_v2/final_test_evaluation/
+
+# -----------------------------------------------------------------------------
+# 6. Heavy Raw Dataset Label Dumps & Detailed Prediction CSVs
+# -----------------------------------------------------------------------------
+# Raw tabular dataset caches (>10MB in eda_outputs)
+eda_outputs/ddr_*.csv
+eda_outputs/quality_sample.csv
+
+# Large per-image prediction dumps
+*_predictions*.csv
+train_results_v2/*_predictions*.csv
+train_results_v2/final_model_package_outputs/*predictions*.csv
+
+# -----------------------------------------------------------------------------
+# 7. Heavy Presentation & Report Binaries
+# -----------------------------------------------------------------------------
+*.pdf
+*.pptx
+*.docx
+
+# -----------------------------------------------------------------------------
+# 8. Python Runtime & Environment Artifacts
+# -----------------------------------------------------------------------------
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
 build/
-develop-eggs/
 dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
 
-# Virtual Environments
+# Virtual environments
 venv/
 .venv/
 env/
@@ -61,33 +101,27 @@ ENV/
 env.bak/
 venv.bak/
 
-# Jupyter Notebook Checkpoints
+# -----------------------------------------------------------------------------
+# 9. Jupyter & IDE Artifacts
+# -----------------------------------------------------------------------------
 .ipynb_checkpoints/
 *-checkpoint.ipynb
-
-# Streamlit Local Configurations & Cache
-.streamlit/secrets.toml
-
-# Operating System Files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-Thumbs.db:encryptable
-desktop.ini
-
-# IDE & Editor Specific Files
 .idea/
 .vscode/
-*.sublime-project
-*.sublime-workspace
 *.swp
 *.swo
 
-# Logs & Temporary Files
+# -----------------------------------------------------------------------------
+# 10. Streamlit & OS System Files
+# -----------------------------------------------------------------------------
+.streamlit/secrets.toml
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+
+# Logs & Temp files
 *.log
 logs/
 temp/

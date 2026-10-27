@@ -34,7 +34,6 @@
 - [🚀 Quickstart Guide](#-quickstart-guide)
 - [📁 Project Structure](#-project-structure)
 - [👥 Contributors](#-contributors)
-- [🙏 Acknowledgments](#-acknowledgments)
 - [📄 License](#-license)
 
 ---
@@ -220,23 +219,14 @@ This project was built and developed collaboratively by:
 
 | Contributor | Focus Area |
 |:---:|:---|
-| <img src="https://github.com/identicons/khushboot.png" width="70px" style="border-radius:50%;" /><br> **Khushboo Talaviya** | *Deep Learning Architecture, Model Training & Data Preprocessing* |
-| <img src="https://github.com/identicons/karunyaa.png" width="70px" style="border-radius:50%;" /><br> **Karunya Agarwal** | *PennyLane Quantum VQC Pipeline & Neuro-Symbolic Reasoning Rules* |
-| <img src="https://github.com/identicons/kunalj.png" width="70px" style="border-radius:50%;" /><br> **Kunal Jhindal** | *Grad-CAM++ Explainability, Streamlit UI Frontend & Custom CSS* |
+| <img src="https://github.com/identicons/khushboot.png" width="70px" style="border-radius:50%;" /><br> **Khushboo Talaviya** 
+| <img src="https://github.com/identicons/karunyaa.png" width="70px" style="border-radius:50%;" /><br> **Karunya Agarwal** 
+| <img src="https://github.com/identicons/kunalj.png" width="70px" style="border-radius:50%;" /><br> **Kunal Jhindal** 
 
 </div>
 
 ---
 
-## 🙏 Acknowledgments
-
-We would like to express our deepest gratitude to our teacher and mentor:
-
-> *"This project truly would not have been possible without the invaluable guidance, constructive insights, continuous support, and mentorship of **@[Teacher Name]**. Thank you for encouraging us to innovate at the intersection of Deep Learning, Quantum Computing, and Clinical AI safety."*
-
-We also extend our thanks to the creators of the **OIA-DDR Dataset**, **PennyLane**, **PyTorch**, and the open-source medical AI community.
-
----
 
 ## 📄 License
 

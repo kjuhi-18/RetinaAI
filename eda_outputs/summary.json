@@ -1,0 +1,32 @@
+{
+  "dataset": "OIA-DDR (DR grading)",
+  "images_in_label_files": 13673,
+  "ungradable_removed": 1151,
+  "graded_images": 12522,
+  "per_split": {
+    "test": 3759,
+    "train": 6260,
+    "valid": 2503
+  },
+  "per_class": {
+    "No DR": 6266,
+    "Mild": 630,
+    "Moderate": 4477,
+    "Severe": 236,
+    "Proliferative DR": 913
+  },
+  "imbalance_ratio": 26.55,
+  "n_resolutions": 130,
+  "preprocess_mode": "clahe",
+  "image_size": 320,
+  "ddr_mean": [
+    0.4341,
+    0.2784,
+    0.1592
+  ],
+  "ddr_std": [
+    0.3051,
+    0.2044,
+    0.1364
+  ]
+}

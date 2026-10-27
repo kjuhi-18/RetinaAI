@@ -1,0 +1,3 @@
+model,params_M,train_s_per_epoch,infer_ms_per_img,best_val_qwk,test_acc,test_macro_f1,test_qwk,test_qwk_TTA,qwk_TTA_CI_low,qwk_TTA_CI_high,recall_No DR,recall_Mild,recall_Moderate,recall_Severe,recall_Proliferative DR
+resnet50 (ImageNet baseline),23.5,6.5,8.8,0.0734,0.2,0.06666666666666667,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+densenet121,7.0,4.9,10.0,-0.0273,0.18,0.12478653903398143,0.0,-2.220446049250313e-16,-0.18384189101794998,0.1693106520873031,0.0,0.2,0.65,0.0,0.4

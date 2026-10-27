@@ -1,0 +1,376 @@
+/* -------------------------------------------------------------
+   RetinaAI - Modern Medical Deep Learning Dashboard Stylesheet
+   Theme: Precision Clinical Dark UI with Glassmorphic Elements
+------------------------------------------------------------- */
+
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+    --bg-primary: #0a0f1d;
+    --bg-secondary: #111827;
+    --bg-card: rgba(17, 24, 39, 0.75);
+    --border-color: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(56, 189, 248, 0.3);
+    
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    
+    --dr-0: #10b981; /* No DR - Emerald Green */
+    --dr-1: #eab308; /* Mild - Golden Amber */
+    --dr-2: #f97316; /* Moderate - Vibrant Orange */
+    --dr-3: #ef4444; /* Severe - Crimson Red */
+    --dr-4: #a855f7; /* Proliferative - Purple Magenta */
+    
+    --accent-blue: #38bdf8;
+    --accent-teal: #14b8a6;
+    --accent-indigo: #6366f1;
+}
+
+/* Global Font & Streamlit App Container */
+html, body, [class*="css"] {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-primary);
+}
+
+.stApp {
+    background-color: var(--bg-primary);
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.08) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.08) 0px, transparent 50%),
+        radial-gradient(at 50% 100%, rgba(16, 185, 129, 0.05) 0px, transparent 50%);
+    background-attachment: fixed;
+}
+
+/* Header Banner */
+.header-container {
+    padding: 2.2rem 2.4rem;
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.85) 100%);
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(16px);
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc, #34d399);
+}
+
+.header-title {
+    font-size: 2.3rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.header-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Badge Pills */
+.pill-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1.2rem;
+}
+
+.pill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.pill-badge:hover {
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(56, 189, 248, 0.4);
+    transform: translateY(-1px);
+}
+
+.pill-badge.cyan { border-color: rgba(56, 189, 248, 0.3); color: #38bdf8; }
+.pill-badge.green { border-color: rgba(16, 185, 129, 0.3); color: #34d399; }
+.pill-badge.purple { border-color: rgba(168, 85, 247, 0.3); color: #c084fc; }
+
+/* Glassmorphic Card Containers */
+.glass-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    transition: border-color 0.25s ease, transform 0.25s ease;
+    margin-bottom: 1.25rem;
+}
+
+.glass-card:hover {
+    border-color: var(--border-hover);
+}
+
+.card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Metric KPI Boxes */
+.kpi-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin: 1.2rem 0;
+}
+
+.kpi-box {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 1.1rem;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.kpi-box:hover {
+    background: rgba(30, 41, 59, 0.9);
+    border-color: rgba(56, 189, 248, 0.3);
+    transform: translateY(-2px);
+}
+
+.kpi-value {
+    font-size: 1.8rem;
+    font-weight: 800;
+    font-family: 'JetBrains Mono', monospace;
+    color: #38bdf8;
+    margin-bottom: 0.2rem;
+}
+
+.kpi-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+/* Severity Diagnoses Display Cards */
+.diagnosis-banner {
+    border-radius: 16px;
+    padding: 1.8rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    border: 1px solid;
+    position: relative;
+    overflow: hidden;
+}
+
+.diagnosis-grade-0 {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(6, 78, 59, 0.25) 100%);
+    border-color: rgba(16, 185, 129, 0.4);
+}
+.diagnosis-grade-1 {
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.15) 0%, rgba(113, 63, 18, 0.25) 100%);
+    border-color: rgba(234, 179, 8, 0.4);
+}
+.diagnosis-grade-2 {
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.15) 0%, rgba(124, 45, 18, 0.25) 100%);
+    border-color: rgba(249, 115, 22, 0.4);
+}
+.diagnosis-grade-3 {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.18) 0%, rgba(127, 29, 29, 0.3) 100%);
+    border-color: rgba(239, 68, 68, 0.4);
+}
+.diagnosis-grade-4 {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(88, 28, 135, 0.3) 100%);
+    border-color: rgba(168, 85, 247, 0.5);
+}
+
+.diagnosis-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.diagnosis-name {
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0;
+}
+
+.diagnosis-badge {
+    padding: 0.45rem 1.1rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.badge-dr-0 { background: rgba(16, 185, 129, 0.25); color: #34d399; border: 1px solid var(--dr-0); }
+.badge-dr-1 { background: rgba(234, 179, 8, 0.25); color: #fde047; border: 1px solid var(--dr-1); }
+.badge-dr-2 { background: rgba(249, 115, 22, 0.25); color: #fdba74; border: 1px solid var(--dr-2); }
+.badge-dr-3 { background: rgba(239, 68, 68, 0.25); color: #fca5a5; border: 1px solid var(--dr-3); }
+.badge-dr-4 { background: rgba(168, 85, 247, 0.25); color: #e9d5ff; border: 1px solid var(--dr-4); }
+
+/* Probability Bar Breakdown */
+.prob-item {
+    margin-bottom: 0.85rem;
+}
+
+.prob-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.88rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+    color: #e2e8f0;
+}
+
+.prob-bar-track {
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 9999px;
+    overflow: hidden;
+    position: relative;
+}
+
+.prob-bar-fill {
+    height: 100%;
+    border-radius: 9999px;
+    transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Neuro-Symbolic Status Boxes */
+.ns-box {
+    border-radius: 12px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+.ns-pass {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #a7f3d0;
+}
+
+.ns-flag {
+    background: rgba(239, 68, 68, 0.12);
+    border: 1px solid rgba(239, 68, 68, 0.35);
+    color: #fecaca;
+}
+
+/* Custom Tabs Styling */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 0.5rem;
+    background-color: rgba(15, 23, 42, 0.6);
+    padding: 0.5rem 0.6rem;
+    border-radius: 14px;
+    border: 1px solid var(--border-color);
+}
+
+.stTabs [data-baseweb="tab"] {
+    height: 42px;
+    border-radius: 10px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.92rem;
+    border: none;
+    padding: 0 1.2rem;
+    transition: all 0.2s ease;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: rgba(56, 189, 248, 0.15) !important;
+    color: #38bdf8 !important;
+    border: 1px solid rgba(56, 189, 248, 0.3) !important;
+}
+
+/* Streamlit Button Overrides */
+.stButton > button {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    color: #ffffff;
+    font-weight: 600;
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    border-radius: 12px;
+    padding: 0.55rem 1.4rem;
+    box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+    transition: all 0.25s ease;
+}
+
+.stButton > button:hover {
+    background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+    border-color: rgba(56, 189, 248, 0.8);
+    box-shadow: 0 6px 20px rgba(2, 132, 199, 0.5);
+    transform: translateY(-1px);
+}
+
+/* Sidebar Custom Styling */
+section[data-testid="stSidebar"] {
+    background-color: #0b1120;
+    border-right: 1px solid var(--border-color);
+}
+
+section[data-testid="stSidebar"] .stSelectbox label,
+section[data-testid="stSidebar"] .stSlider label {
+    font-weight: 600;
+    color: #cbd5e1;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}

@@ -1,0 +1,20 @@
+{
+  "experiment": "dn121_512_d",
+  "starting_checkpoint": "/content/drive/MyDrive/DDR_work (1)/train_results_v2/dn121_512_b_best.pt",
+  "best_epoch": 7,
+  "best_val_macro_f1": 0.6681289983009897,
+  "best_checkpoint": "/content/drive/MyDrive/DDR_work (1)/train_results_v2/dn121_512_d_best.pt",
+  "selection_metric": "validation_macro_f1",
+  "test_set_used_for_selection": false,
+  "class_weights": [
+    0.6472084522247314,
+    1.1447480916976929,
+    0.7011687755584717,
+    1.4632450342178345,
+    1.04362952709198
+  ],
+  "learning_rate_initial": 5e-06,
+  "epochs_completed": 8,
+  "total_seconds": 2785.558492422104,
+  "normalization": "ImageNet mean/std (original training config unverified)"
+}

@@ -1,0 +1,6 @@
+test_index,true_grade,predicted_grade,confidence,gradcam_plus_plus_file
+0,No DR,No DR,0.9752052426338196,/content/drive/MyDrive/DDR_work/train_results_v2/final_model_package_outputs/gradcampp_true_no_dr_idx_0.png
+6,Mild,Moderate,0.9194548726081848,/content/drive/MyDrive/DDR_work/train_results_v2/final_model_package_outputs/gradcampp_true_mild_idx_6.png
+3,Moderate,Mild,0.9472396969795227,/content/drive/MyDrive/DDR_work/train_results_v2/final_model_package_outputs/gradcampp_true_moderate_idx_3.png
+21,Severe,Severe,0.9844240546226501,/content/drive/MyDrive/DDR_work/train_results_v2/final_model_package_outputs/gradcampp_true_severe_idx_21.png
+2,Proliferative,Proliferative,0.9999767541885376,/content/drive/MyDrive/DDR_work/train_results_v2/final_model_package_outputs/gradcampp_true_proliferative_idx_2.png

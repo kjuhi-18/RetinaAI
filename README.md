@@ -7,7 +7,6 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![PennyLane Quantum](https://img.shields.io/badge/PennyLane-Quantum_VQC-ffd43b?style=for-the-badge&logo=quantum&logoColor=black)](https://pennylane.ai/)
 [![Streamlit UI](https://img.shields.io/badge/Streamlit-App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
-[![License](https://img.shields.io/badge/License-MIT-green.style=for-the-badge)](LICENSE)
 [![Quadratic Weighted Kappa](https://img.shields.io/badge/QWK_Score-0.865-06B6D4?style=for-the-badge)](#-benchmark-results)
 
 <p align="center">
@@ -217,8 +216,8 @@ This project was built and developed collaboratively by:
 
 <div align="center">
 
-| Contributor | Focus Area |
-|:---:|:---|
+| Contributor | 
+|:---:|
 | <img src="https://github.com/identicons/khushboot.png" width="70px" style="border-radius:50%;" /><br> **Khushboo Talaviya** 
 | <img src="https://github.com/identicons/karunyaa.png" width="70px" style="border-radius:50%;" /><br> **Karunya Agarwal** 
 | <img src="https://github.com/identicons/kunalj.png" width="70px" style="border-radius:50%;" /><br> **Kunal Jhindal** 

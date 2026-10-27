@@ -1,18 +1,9 @@
 # =============================================================================
-# Gitignore for Diabetic Retinopathy Deep Learning & Streamlit Project
+# Gitignore for Deep Learning & Streamlit Project
 # =============================================================================
 
 # -----------------------------------------------------------------------------
-# 1. Unrelated Projects & Duplicate Notebooks
-# -----------------------------------------------------------------------------
-# Unrelated Lung/LIDC & YNet experiments not part of Diabetic Retinopathy
-LIDC_*
-YNet_*
-Copy_of_*
-*_copy.ipynb
-
-# -----------------------------------------------------------------------------
-# 2. Large Dataset Archives & Cached Image Directories
+# 1. Large Dataset Archives & Cached Image Directories
 # -----------------------------------------------------------------------------
 *.zip
 *.tar
@@ -25,8 +16,9 @@ data/
 datasets/
 
 # -----------------------------------------------------------------------------
-# 3. Model Weights & Checkpoints (>25MB - 100MB+ binary weights)
+# 2. Model Weights & Checkpoints (>25MB - 100MB+ binary weights)
 # -----------------------------------------------------------------------------
+# Checkpoints exceed Git's recommended size (use Git LFS or Drive/HuggingFace)
 *.pt
 *.pth
 *.ckpt
@@ -37,7 +29,7 @@ datasets/
 *.weights
 
 # -----------------------------------------------------------------------------
-# 4. Precomputed Batch Features & Serialized Pipelines
+# 3. Precomputed Batch Features & Serialized Pipelines
 # -----------------------------------------------------------------------------
 *.npy
 *.npz
@@ -50,7 +42,7 @@ vqc_results_512/valid_batches/
 vqc_results_512/test_batches/
 
 # -----------------------------------------------------------------------------
-# 5. Old/Superseded Experiments & Smoke Tests
+# 4. Old/Superseded Experiments & Smoke Tests
 # -----------------------------------------------------------------------------
 # Old 320x320 experiments (superseded by train_results_v2 512x512)
 train_results/
@@ -61,7 +53,7 @@ train_results/
 train_results_v2/final_test_evaluation/
 
 # -----------------------------------------------------------------------------
-# 6. Heavy Raw Dataset Label Dumps & Detailed Prediction CSVs
+# 5. Heavy Raw Dataset Label Dumps & Detailed Prediction CSVs
 # -----------------------------------------------------------------------------
 # Raw tabular dataset caches (>10MB in eda_outputs)
 eda_outputs/ddr_*.csv
@@ -73,14 +65,7 @@ train_results_v2/*_predictions*.csv
 train_results_v2/final_model_package_outputs/*predictions*.csv
 
 # -----------------------------------------------------------------------------
-# 7. Heavy Presentation & Report Binaries
-# -----------------------------------------------------------------------------
-*.pdf
-*.pptx
-*.docx
-
-# -----------------------------------------------------------------------------
-# 8. Python Runtime & Environment Artifacts
+# 6. Python Runtime & Environment Artifacts
 # -----------------------------------------------------------------------------
 __pycache__/
 *.py[cod]
@@ -102,17 +87,19 @@ env.bak/
 venv.bak/
 
 # -----------------------------------------------------------------------------
-# 9. Jupyter & IDE Artifacts
+# 7. Jupyter & IDE Artifacts
 # -----------------------------------------------------------------------------
 .ipynb_checkpoints/
 *-checkpoint.ipynb
+Copy_of_*
+*_copy.ipynb
 .idea/
 .vscode/
 *.swp
 *.swo
 
 # -----------------------------------------------------------------------------
-# 10. Streamlit & OS System Files
+# 8. Streamlit & OS System Files
 # -----------------------------------------------------------------------------
 .streamlit/secrets.toml
 .DS_Store
